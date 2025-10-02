@@ -6,7 +6,7 @@ const Step = ({index,formData,handleChange,handlePrev,handleNext,handleSubmit}) 
         <h1>Customer Details</h1>
         <br></br>
   {index==1 &&
-   (<div>
+   (<div id="step1">
    <label htmlFor="first_name">First Name:</label>
       <input type="text"  id="first_name" name="firstName" value={formData.firstName} onChange={handleChange}/>
       <br></br><br></br>
@@ -16,7 +16,7 @@ const Step = ({index,formData,handleChange,handlePrev,handleNext,handleSubmit}) 
       </div>)
   }
   {index==2 &&
-  ( <div>
+  ( <div id="step2">
         <label htmlFor="car_price">Make:</label>
       <input type="text"  id="car_price" name="make" value={formData.make} onChange={handleChange}/>
       <br></br><br></br>
@@ -26,7 +26,7 @@ const Step = ({index,formData,handleChange,handlePrev,handleNext,handleSubmit}) 
       </div>
       )}
       {index==3 && (
-        <div>
+        <div id='step3'>
         <label htmlFor="card-info">Credit Card Number:</label>
         <input id="card-info" type="tel" pattern="[0-9\s]{13,19}" minLength="0"
           maxLength="12" name='card_info' inputMode='numeric'
